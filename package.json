@@ -1,0 +1,31 @@
+{
+  "name": "mayaki",
+  "version": "1.0.0",
+  "description": "m prj",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vit05/mayaki.git"
+  },
+  "author": "team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vit05/mayaki/issues"
+  },
+  "homepage": "https://github.com/Vit05/mayaki#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.2.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngquant": "^5.0.0",
+    "rimraf": "^2.6.1"
+  }
+}

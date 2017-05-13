@@ -1,2 +1,1 @@
-# mayaki
-m prj
+# mayakiinit gulp file for frontend build

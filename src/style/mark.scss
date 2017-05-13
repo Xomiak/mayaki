@@ -1,0 +1,15 @@
+@import "var";
+
+.cont {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #faa;
+  @include clr;
+}
+
+.cont-full {
+  width: 100%;
+  @include clr;
+}
+
