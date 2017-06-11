@@ -1,5 +1,5 @@
 //@import 'https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700&subset=cyrillic';
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic,cyrillic-ext');
 $btn_c: #fedc00;
 $w: #ffffff;
 $bg_c1: #3bc8ff;
@@ -7,8 +7,8 @@ $bg_c2: #00a6e6;
 $bg_footer: #003144;
 $txt_c: #484748;
 
-$ff: 'Cera PRO', sans-serif;
-$fr: 'Roboto', sans-serif;
+$ff: 'Open Sans', sans-serif;;
+//$fr: 'Roboto', sans-serif;
 
 
 
@@ -27,7 +27,6 @@ $fr: 'Roboto', sans-serif;
   -moz-border-radius: $r;
   border-radius: $r;
 }
-
 @mixin trans($times:200ms) {
   -webkit-transition: all $times ease-in-out;
   -moz-transition: all $times ease-in-out;
@@ -39,7 +38,6 @@ $fr: 'Roboto', sans-serif;
   height: $height;
   width: $width;
   position: relative;
-
   img{
     max-height: 100%;
     max-width: 100%;
@@ -53,8 +51,6 @@ $fr: 'Roboto', sans-serif;
     margin: auto;
   }
 }
-
-
 @mixin button($bc:$bg_c2, $bgc:$w, $width: 200px, $h:40px){
   /*font:400 16px $ff;
   display: block;
