@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>Title</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/animate.css">
@@ -12,6 +13,7 @@
 </head>
 <body>
 <header class="container-full header">
+
     <div class="container header-container ">
         <div class="main-logo">
             <img src="img/logoPngPagespeedCeU1NJ0CGduY.png"
@@ -29,15 +31,29 @@
                 <li><a href="">контакты</a></li>
             </ul>
         </div>
+        <div id="mob_bg"></div>
+        <div id="mobile_nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
+
 </header>
 
 <main class="">
     <div class="container-full box-1">
-        <img src="img/layer1.png"
-             srcset="img/layer1@2x.png 2x,
-             img/layer1@3x.png 3x"
-             class="Layer-1">
+
+
+        <div class="swiper-container swiper-main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/heder_img001.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/heder_img002.JPG" alt=""></div>
+                <div class="swiper-slide"><img src="img/heder_img003.JPG" alt=""></div>
+
+            </div>
+            <!-- Add Arrows -->
+        </div>
 
         <h1>Частная усадьба «Тихая Гавань»
             вблизи Одессы</h1>
@@ -78,12 +94,12 @@
 
     <!--REVIEWS-->
     <div class="container-full box-3">
-        <div class="container-slider">
-            <h2>Отзывы</h2>
-            <!-- Swiper -->
-            <div class="swiper-container swiper-reviews">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+        <h2>Отзывы</h2>
+        <div class="swiper-container swiper-reviews">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(img/fishing_001.JPG)">
+                    <!--<img src="img/fishing_001.JPG" alt="">-->
+                    <div class="container-slider">
                         <div class="reviews-item">
                             <h3>Антон<br>
                                 Леонидович</h3>
@@ -93,13 +109,36 @@
                                     интернет, рядом рынок где можно все купить. Одно пожелание.
                                     Для детей есть где поиграть Песочница, различные игрушки. Мы т
                                     ри дня там были полетели как один день Договорились с друзьями
+                                    летом еще поехать</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide" style="background-image: url(img/fishing_002.JPG)">
+                    <div class="container-slider">
+
+                        <div class="reviews-item">
+                            <h3>Антон<br>
+                                Леонидович</h3>
+                            <div class="reviews-desc">
+                                <p class="reviews-data">24 марта 2017</p>
+                                <p>Для отдыха место приемлемое Близко от города дорога хорошая мобилка,
+                                    интернет, рядом рынок где можно все купить. Одно пожелание.
+                                    Для детей есть где поиграть Песочница, различные игрушки. Мы т
+                                    ри дня там были полетели как один день Договорились с друзьями
+                                    летом еще поехать</p>
+                                <p>ри дня там были полетели как один день Договорились с друзьями
                                     летом еще поехать</p>
                             </div>
 
                         </div>
 
                     </div>
-                    <div class="swiper-slide">
+                </div>
+                <div class="swiper-slide" style="background-image: url(img/fishing_003.JPG)">
+                    <div class="container-slider">
                         <div class="reviews-item">
                             <h3>Антон<br>
                                 Леонидович</h3>
@@ -113,57 +152,22 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-item">
-                            <h3>Антон<br>
-                                Леонидович</h3>
-                            <div class="reviews-desc">
-                                <p class="reviews-data">24 марта 2017</p>
-                                <p>Для отдыха место приемлемое Близко от города дорога хорошая мобилка,
-                                    интернет, рядом рынок где можно все купить. Одно пожелание.
-                                    Для детей есть где поиграть Песочница, различные игрушки. Мы т
-                                    ри дня там были полетели как один день Договорились с друзьями
-                                    летом еще поехать</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reviews-item">
-                            <h3>Антон<br>
-                                Леонидович</h3>
-                            <div class="reviews-desc">
-                                <p class="reviews-data">24 марта 2017</p>
-                                <p>Для отдыха место приемлемое Близко от города дорога хорошая мобилка,
-                                    интернет, рядом рынок где можно все купить. Одно пожелание.
-                                    Для детей есть где поиграть Песочница, различные игрушки. Мы т
-                                    ри дня там были полетели как один день Договорились с друзьями
-                                    летом еще поехать</p>
-                            </div>
-
-                        </div>
-
                     </div>
 
                 </div>
 
-                <!-- Add Arrows -->
-
             </div>
-            <div class="slider-nav slider-button-next reviews-next"></div>
-            <div class="slider-nav slider-button-prev reviews-prev"></div>
 
-            <a href="" class="button go-to-gallery">Вся Отзывы</a>
         </div>
+        <a href="" class="button go-to-gallery">Вся Отзывы</a>
     </div>
 
     <!--MAP BOX-->
     <div class="container-full box-map">
         <div class="map-title-cont">
-            <div class="container"><h2>Карта</h2> <button id="map_burger" class="map-burger"></button></div>
+            <div class="container"><h2>Карта</h2>
+                <button id="map_burger" class="map-burger"></button>
+            </div>
         </div>
         <div class="map-frame-container">
             <div id="main_map"></div>
@@ -177,13 +181,33 @@
     <div class="container">
         <div class="footer-contacts">
             <h3>Контакты</h3>
-            <ul>
+            <ul class="list-contacts">
                 <li>Частная усадьба «Тихая Гавань»</li>
                 <li>Украина , Одесская область , с. Маяки , ул. Речная, 40а.</li>
                 <li>Тел.: <a href="tel:380509417970">+380 (50) 941-79-70</a> - Любовь Владимировна</li>
                 <li>Тел.: <a href="tel:380505048090">+380 (50) 504-80-90</a> - Оксана</li>
                 <li>Тел.: <a href="tel:380672825885">+380 (67) 282-58-85</a></li>
                 <li>E-mail: mayakiodessa@gmail.com</li>
+            </ul>
+            <ul class="social-link">
+                <li><a href="">
+                    <img src="img/invalidName.png"
+                         srcset="img/invalidName@2x.png 2x, img/invalidName@3x.png 3x"
+                         class="layer">
+                </a></li>
+                <li><a href="">
+                    <img src="img/youtube.png"
+                         srcset="img/youtube@2x.png 2x, img/youtube@3x.png 3x"
+                         class="layer">
+                </a></li>
+                <li><a href=""><img src="img/gg.png"
+                                    srcset="img/gg@2x.png 2x, img/gg@3x.png 3x"
+                                    class="layer"></a></li>
+                <li><a href="">
+                    <img src="img/insta.png"
+                         srcset="img/insta@2x.png 2x, img/insta@3x.png 3x"
+                         class="layer">
+                </a></li>
             </ul>
         </div>
         <div class="main-nav footer-nav">

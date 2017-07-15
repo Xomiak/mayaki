@@ -2,15 +2,9 @@
 
 .box-1 {
   position: relative;
-
-  .container {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    margin-left: -650px;
-  }
   h1 {
     position: absolute;
+    z-index: 10;
     //outline: 1px solid red;
     font-family: $ff;
     font-size: 72px;
@@ -27,12 +21,66 @@
   }
 
   .to-bottom {
+    z-index: 10;
     position: absolute;
     bottom: 31px;
     left: 50%;
     margin-left: -16px;
   }
+}
 
+@media screen and (max-width: 1024px) {
+  .box-1 {
+    h1 {
+      font-size: 52px;
+      width: auto;
+      padding: 250px 0;
+      left: 0;
+      right: 0;
+      margin-left: 0;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-1 {
+    h1 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .box-1 {
+    position: relative;
+    h1 {
+      padding: 65px;
+      font-size: 32px;
+
+    }
+
+    .to-bottom {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .box-1 {
+    position: relative;
+    h1 {
+      font-size: 26px;
+    }
+
+    .to-bottom {
+      z-index: 10;
+      position: absolute;
+      bottom: 31px;
+      left: 50%;
+      margin-left: -16px;
+    }
+  }
 }
 
 .box-2 {
@@ -52,7 +100,7 @@
     color: #333333;
   }
   .container-slider {
-   
+
     max-width: 1450px;
     width: 100%;
     margin: 0 auto;
@@ -73,13 +121,37 @@
   }
 }
 
-.box-3{
-  //background-image: url('../img/18.jpg');
-  padding-bottom: 80px;
-  background-image:  url('../img/layer1.jpg');
-  background-repeat: no-repeat, no-repeat;
-  background-position: left top, left top;
+@media screen and (max-width: 1300px) {
+  .box-2 {
+    .container-slider {
+      max-width: none;
+      width: 98%;
+    }
+    .swiper-container {
+      max-width: none;
+      width: 88%;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .box-2 {
+    padding-bottom: 40px;
+    h2 {
+      padding: 30px 0;
+      font-size: 26px;
+    }
+  }
+}
+
+.box-3 {
+  position: relative;
   h2 {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
     text-align: center;
     padding: 60px 0 30px 0;
     font-family: $ff;
@@ -90,24 +162,12 @@
     color: #fff;
     text-transform: uppercase;
   }
-  .container-slider {
-
-    max-width: 1450px;
-    width: 100%;
-    margin: 0 auto;
-    //outline: 1px solid yellow;
-    position: relative;
-    @include clr;
-  }
-
-  .swiper-container {
-    padding-bottom: 30px;
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .swiper-slide{
-    padding: 50px 0 100px 0;
+  .swiper-slide {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    //padding: 50px 0 100px 0;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -126,7 +186,31 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    .reviews-item{
+    .container-slider {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .reviews-item {
+      z-index: 10;
       -webkit-order: 0;
       -ms-flex-order: 0;
       order: 0;
@@ -137,7 +221,7 @@
       -ms-flex-item-align: auto;
       align-self: auto;
       overflow: hidden;
-      h3{
+      h3 {
         padding: 2px 0;
         margin-top: 40px;
         float: left;
@@ -149,7 +233,7 @@
         text-align: right;
         color: #ffffff;
         position: relative;
-        &:before{
+        &:before {
           content: '';
           width: 4px;
           position: absolute;
@@ -159,8 +243,8 @@
           right: 0;
           top: 65px;
         }
-        &:after{
-          content:'';
+        &:after {
+          content: '';
           width: 4px;
           position: absolute;
           height: 100%;
@@ -170,17 +254,17 @@
           bottom: 65px;
         }
       }
-      .reviews-desc{
+      .reviews-desc {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding: 40px 30px;
-        border-top:4px solid #fff;
-        border-right:4px solid #fff;
-        border-bottom:4px solid #fff;
+        border-top: 4px solid #fff;
+        border-right: 4px solid #fff;
+        border-bottom: 4px solid #fff;
         max-width: 400px;
         float: right;
-        p{
+        p {
           font-family: $ff;
           font-size: 14px;
           font-weight: 600;
@@ -191,75 +275,114 @@
         }
       }
     }
-  }
-  .reviews-prev{
-    background-image: url('../img/1Copy.png'), url('../img/2Copy.png');
-    transform: rotate(180deg);
-    opacity: 1;
-  }
-  .reviews-next{
-    @extend .reviews-prev;
-    transform: rotate(0deg);
-  }
-  /*.reviews-item{
-    float: right;
-    outline: 1px solid #fff;
-    overflow: hidden;
-    h3{
-      padding: 2px 0;
-      margin-top: 40px;
-      float: left;
-      font-size: 30px;
-      font-family: $ff;
-      font-weight: bold;
-      line-height: 1;
-      letter-spacing: 0.6px;
-      text-align: right;
-      color: #ffffff;
-      position: relative;
-      &:before{
-        content: '';
-        width: 4px;
-        position: absolute;
-        height: 500px;
-        display: block;
-        background: #fff;
-        right: 0;
-        top: 65px;
-      }
-      &:after{
-        content:'';
-        width: 4px;
-        position: absolute;
-        height: 100%;
-        display: block;
-        background: #fff;
-        right: 0;
-        bottom: 65px;
-      }
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+15,0d0ab5+62,001966+100&0+32,1+100 */
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 15%, rgba(167, 166, 228, 0) 32%, rgba(13, 10, 181, 0.44) 62%, rgba(0, 25, 102, 1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 15%, rgba(167, 166, 228, 0) 32%, rgba(13, 10, 181, 0.44) 62%, rgba(0, 25, 102, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 15%, rgba(167, 166, 228, 0) 32%, rgba(13, 10, 181, 0.44) 62%, rgba(0, 25, 102, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#001966', GradientType=1); /* IE6-9 */
+
     }
-    .reviews-desc{
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 40px 30px;
-      border-top:4px solid #fff;
-      border-right:4px solid #fff;
-      border-bottom:4px solid #fff;
-      max-width: 400px;
-      float: right;
-    }
-  }*/
+
+  }
+
   .go-to-gallery {
-    float: right;
-    margin-right: 75px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    margin-left: -92px;
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .box-3 {
+    .swiper-slide {
+      height: 100vh;
+      .container-slider {
+        max-width: none;
+        width: 95%;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-3 {
+    h2 {
+      padding: 30px 0;
+      font-size: 26px;
+    }
+    .swiper-slide {
+      height: auto;
+      min-height: 500px;
+
+      .container-slider {
+        outline: 1px solid greenyellow;
+        max-width: none;
+
+      }
+      .reviews-item {
+
+        h3 {
+
+          float: none;
+          text-align: center;
+          width: 80%;
+          margin: 0 auto -20px auto;
+          font-size: 24px;
+          &:before {
+            display: none;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .reviews-desc {
+          padding: 30px 20px;
+          border-top: 0;
+          border-left: 4px solid #fff;
+
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .box-3 {
+
+    .swiper-slide {
+      &:after {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1660ba+0,003b84+100&0.65+0,1+100 */
+        background: -moz-linear-gradient(left, rgba(22, 96, 186, 0.65) 0%, rgba(0, 59, 132, 1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(22, 96, 186, 0.65) 0%, rgba(0, 59, 132, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(22, 96, 186, 0.65) 0%, rgba(0, 59, 132, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a61660ba', endColorstr='#003b84', GradientType=1); /* IE6-9 */
+      }
+    }
+
   }
 }
 
 
-.box-map{
+
+
+
+
+.box-map {
   position: relative;
-  .map-title-cont{
+  .map-title-cont {
     background-color: rgba(#cc922c, 0.7);
     padding: 30px 0;
     z-index: 1000;
@@ -271,11 +394,11 @@
     left: 0;
     right: 0;
 
-    .container{
+    .container {
       position: relative;
     }
     @include clr;
-    h2{
+    h2 {
       font-family: $ff;
       font-size: 40px;
       font-weight: bold;
@@ -284,27 +407,47 @@
       text-align: center;
       color: #ffffff;
     }
-    .map-burger{
+    .map-burger {
       position: absolute;
       right: 0;
 
     }
   }
-  .map-frame-container{
+  .map-frame-container {
     height: 80px;
     z-index: 990;
     position: relative;
     overflow: hidden;
     @include trans(500ms);
-    &.active{
+    &.active {
       height: 75vh;
+    }
+  }
+}
+#main_map {
+  height: 75vh;
+  width: 100%;
+
+}
+@media screen and (max-width: 768px) {
+  .box-map {
+    .map-title-cont {
+      padding: 25px 0;
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .map-frame-container {
+      height: 60px;
+      &.active {
+        height: 75vh;
+      }
     }
   }
 }
 
 
-#main_map{
-  height: 75vh;
-  width: 100%;
 
-}
+
+
+
