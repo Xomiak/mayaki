@@ -147,7 +147,26 @@ button{
     }
 
 }
+@media screen and (max-width: 1024px){
+  .main-title{
+    font-size: 56px;
+    &::after{
+      content: '';
+      width: 100px;
+      height: 4px;
+      display: block;
+      background-color: #fff;
+      margin: 25px auto 80px auto;
 
+    }
+
+  }
+}
+@media screen and (max-width: 425px){
+  .main-title{
+    font-size: 32px;
+  }
+}
 // --h2
 .sub-title{
   font-family: $ff;
@@ -227,7 +246,19 @@ textarea{
   background-color: #fff;
   padding: 50px 0;
 }
-
+/*@media screen and (max-width: 1024px){
+  .line-box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: url('../img/15.png');
+    background-position: top left;
+    background-repeat: repeat-x;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px 0;
+  }
+}*/
 
 
 .map-burger {
